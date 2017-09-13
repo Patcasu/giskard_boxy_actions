@@ -1,0 +1,63 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(two_pts)
+
+find_package(catkin REQUIRED COMPONENTS
+ roscpp 
+	rospy 
+	std_msgs
+	message_generation
+	moove
+	visualization_msgs
+	geometry_msgs
+	giskard_msgs
+	genmsg
+	actionlib_msgs
+	actionlib
+)
+
+
+
+## Generate messages in the 'msg' folder
+#add_message_files(
+#   FILES
+#   
+#   line.msg
+#)
+
+## Generate services in the 'srv' folder
+# add_service_files(
+#   FILES
+#   Service1.srv
+#   Service2.srv
+# )
+
+## Generate actions in the 'action' folder
+
+## Generate added messages and services with any dependencies listed here
+#generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+#   geometry_msgs	
+#   line.msg
+# )
+
+
+catkin_package(
+#  INCLUDE_DIRS include
+#	giskard_msgs
+#  LIBRARIES two_pts
+ CATKIN_DEPENDS rospy std_msgs moove message_runtime geometry_msgs giskard_msgs visualization_msgs
+)
+
+###########
+## Build ##
+###########
+
+## Specify additional locations of header files
+## Your package locations should be listed before other locations
+include_directories(
+ include
+  ${catkin_INCLUDE_DIRS}
+)
+
+

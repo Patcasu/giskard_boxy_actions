@@ -1,0 +1,8 @@
+<launch>
+	<node pkg="line_markers" type="pt_publisher.py" name="pt_publisher" output="screen"> </node>
+	<node pkg="line_markers" type="markers_r.py" name="markers_r" output="screen"> </node>	
+	
+	<node pkg="line_markers" type="action_client_r.py" name="action_client_r" output="screen"> </node>
+	<include file="$(find giskard_boxy)/launch/interactive_markers.launch" /> 
+	
+</launch>
